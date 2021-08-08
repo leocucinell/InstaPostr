@@ -15,17 +15,16 @@ const { User } = require("../models/index");
 
 //GET /login Presentational
 router.get("/login", (req, res, next) => {
-    res.render("/auth/login");
+    res.render("auth/login");
 });
 
 //POST /login Functional
 router.post("/login", async (req, res, next) => {
-    //check if the user exists
     try {
         const foundUser = await User.findOne({$or: [{email: req.body.name}, {username: req.body.name}]});
         if(!foundUser){
             console.log("user does not exist");
-            return res.render("/auth/register");
+            return res.render("auth/register");
         }
 
         const matchedPass = await bcrypt.compare(req.body.password, foundUser.password);
@@ -50,7 +49,7 @@ router.post("/login", async (req, res, next) => {
 
 //GET /register Presentational
 router.get("/register", (req, res, next) => {
-    res.render("../views/auth/register");
+    res.render("auth/register");
 });
 
 //POST /register Functional
