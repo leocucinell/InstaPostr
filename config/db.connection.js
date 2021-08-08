@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 /*NOTE: Set up connection string */
-const connectionStr = "mongodb://localhost:s7017/instapostr";
+const connectionStr = process.env.MONGO_URI || 'mongodb://localhost:s7017/instapostr';
 
 /* NOTE: Connect to the database */
 mongoose.connect(connectionStr, {

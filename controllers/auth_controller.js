@@ -1,38 +1,41 @@
 /* SECTION: External modules */
-const express = require("express");
+const express = require('express');
+const bcrypt = require('bcryptjs');
 
 /* SECTION: Instanced modules */
 const router = express.Router();
 
 /* SECTION: Related model */
-const {User} = require("../models/index");
+const { User } = require("../models/index");
 
 /* SECTION: Related middleware */
 
 /* SECTION: Routes */
-//GET /login Presentational
-app.get("/login", (req, res, next) => {
+//NOTE: Remember, to add to the cookie, use: req.session.example: <some data>
 
+//GET /login Presentational
+router.get("/login", (req, res, next) => {
+    res.send("This is the login route");
 });
 
 //POST /login Functional
-app.post("/login", (req, res, next) => {
-
+router.post("/login", (req, res, next) => {
+    res.send("Posting to the login route");
 });
 
 //GET /register Presentational
-app.get("/register", (req, res, next) => {
-
+router.get("/register", (req, res, next) => {
+    res.send("This is the register route");
 });
 
 //POST /register Functional
-app.post("/register", (req, res, next) => {
-
+router.post("/register", (req, res, next) => {
+    res.send("Posting to the register route");
 });
 
 //GET /logout Functional
-app.get("/logout", (req, res, next) => {
-
+router.get("/logout", (req, res, next) => {
+    res.send("Logging out...");
 });
 
 
