@@ -23,5 +23,5 @@ mongoose.connection.on("error", () => {
 });
 
 mongoose.connection.on("disconnected", () => {
-    console.log('\x1b[33m%s\x1b[0m', 'MongoDB disconnected  ⚡️ 🔌 ⚡️')
+    console.log('\x1b[33m%s\x1b[0m', 'MongoDB disconnected  ⚡️ 🔌 ⚡️');
 });
