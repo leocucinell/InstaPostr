@@ -83,8 +83,15 @@ router.post("/register", async (req, res, next) => {
 });
 
 //GET /logout Functional
-router.get("/logout", (req, res, next) => {
-    res.send("Logging out...");
+router.get("/logout", async (req, res, next) => {
+    //destroy the user session and return to login
+    try {
+        await req.session.destroy();
+        return res.redirect("/login");
+    } catch(error){
+        console.log(error.message);
+        return res.send(error.message);
+    }
 });
 
 
