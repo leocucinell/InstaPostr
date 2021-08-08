@@ -1,0 +1,31 @@
+<%- include("../partials/header") %>
+
+<body class="body-container___login">
+    <div class="cards-container___login">
+
+        <!-- naming convention same for every card -->
+        <div class="post-card___body">
+            <div class="top-bar___post">
+                <img alt="user image" src="">
+                <p id="user-name">Mac Dre</p>
+            </div>
+            <div class="image-container___post">
+                <img alt="post image" src="">
+            </div>
+            <div class="comment-container___post">
+                <p id="user-name">Mac Dre</p>
+                <p id="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, sed.</p>
+            </div>
+        </div>
+
+        <div class="login-card___login">
+            <form action="/login" method="POST">
+                <input type="text" placeholder="Username or Email">
+                <input type="password" placeholder="Password">
+                <button id="login-button">Login</button>
+            </form>
+        </div> 
+
+    </div>
+</body>
+</html>

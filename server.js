@@ -13,7 +13,7 @@ const app = express();
 /* SECTION: Middleware */
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended:true}));
-
+app.use(express.static('public'));
 app.use(
     session({
       store: MongoStore.create({ mongoUrl: process.env.MONGO_URI || 'mongodb://localhost:27017/instapost' }),

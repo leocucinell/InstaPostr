@@ -15,7 +15,7 @@ const { User } = require("../models/index");
 
 //GET /login Presentational
 router.get("/login", (req, res, next) => {
-    res.send("This is the login route");
+    res.render("../views/auth/login");
 });
 
 //POST /login Functional
