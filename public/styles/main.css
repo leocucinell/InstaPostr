@@ -16,6 +16,10 @@ body {
 
 .post-card___body {
   border: 1px solid #DBDBDB;
+  max-width: 450px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 3px;
 }
 .post-card___body .top-bar___post {
   display: flex;
@@ -30,6 +34,7 @@ body {
 }
 .post-card___body .top-bar___post p {
   margin: 20px 0 14px 5px;
+  font-weight: bold;
 }
 .post-card___body .image-container___post img {
   width: 100%;
@@ -39,9 +44,46 @@ body {
 .post-card___body .comment-container___post {
   margin-left: 5px;
 }
+.post-card___body .comment-container___post #user-name {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.post-card___body .comment-container___post #comment-body {
+  margin-top: 5px;
+}
 
 .login-card___login {
   border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.login-card___login h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+.login-card___login .login-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  margin-top: 40px;
+  padding: 20px;
+}
+.login-card___login .login-form input {
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.login-card___login .login-form button {
+  width: 80%;
+  margin-left: 10%;
+  padding: 10px;
+  background-color: #0295f6;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
