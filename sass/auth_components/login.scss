@@ -2,6 +2,7 @@
 
 body {
     background-color: $offWhite;
+    font-family: $main;
 }
 
 .body-container___login {
@@ -70,6 +71,8 @@ body {
     flex-direction: column;
 
     h1 {
+        font-size: 2.8rem;
+        font-family: $header;
         text-align: center;
         margin-top: 50px;
     }
@@ -97,6 +100,11 @@ body {
             border: none;
             border-radius: 3px;
             margin-top: 30px;
+        }
+
+        a {
+            margin-top: 50px;
+            color: $blue;
         }
     }
 }
