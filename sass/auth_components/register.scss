@@ -1,0 +1,110 @@
+@use "../variables" as *;
+
+body {
+    background-color: $offWhite;
+    font-family: $main;
+}
+
+.body-container___register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cards-container___register {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-card___body {
+    border: 1px solid $gray;
+    max-width: 450px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+
+    .top-bar___post{
+        display: flex;
+        flex-direction: row;
+
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 5px;
+        }
+        p {
+            margin: 20px 0 14px 5px;
+            font-weight: bold;
+        }
+    }
+
+    .image-container___post {
+
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .comment-container___post {
+        margin-left: 5px;
+
+        #user-name {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #comment-body {
+            margin-top: 5px;
+        }
+    }
+}
+
+.register-card___register {
+    border: 1px solid $gray;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 2.8rem;
+        font-family: $header;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .register-form {
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        margin-top: 10px;
+        padding: 20px;
+
+        input {
+            padding: 15px;
+            border: 1px solid gray;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 80%;
+            margin-left: 10%;
+            padding: 10px;
+            background-color: $blue;
+            color: $white;
+            border: none;
+            border-radius: 3px;
+            margin-top: 30px;
+        }
+
+        a {
+            margin-top: 50px;
+            color: $blue;
+        }
+    }
+}
