@@ -26,7 +26,23 @@ app.use(
     })
 );
 
+//checks to see if a user is already logged in (through cookies) and directs them to posts if they are
+const checkAuth = function(req, res, next){
+  if(req.path != "/logout"){
+    if(req.path === "login" || req.path === "/register"){
+      if(req.session.currentUser){
+        return res.send("Already logged in");
+      }
+    }
+  }
+}
+
 /* SECTION: Routes */
+//Direct a user to /login if they hit the home route
+app.get("/", (req, res, next) => {
+  return res.redirect("/login")
+});
+
 app.use("/", auth);
 
 /* SECTION: Port config */
