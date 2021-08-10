@@ -38,6 +38,7 @@ router.post("/login", async (req, res, next) => {
             id: foundUser._id,
             username: foundUser.username,
             email: foundUser.email,
+            avatar: foundUser.avatar,
         }
 
         return res.send("Congrats on logging in!");
